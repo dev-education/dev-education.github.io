@@ -1,0 +1,485 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Khula,sans-serif;
+    background: #fbe6eb;
+      
+}
+a {
+    text-decoration: none;
+}
+.con {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 1310px;
+}
+                                                    /*map*/
+
+.manu__flag {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.main_map {
+    width: 40%;
+}
+.main_map div {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    z-index: 20;
+}
+.main_map div:hover {
+    color: coral;
+    font-size: 19px;
+}
+.main_map div img {
+    height: 70%;
+}
+.main_map div p {
+    margin-top: -15px;
+    color: black;
+}
+.oboutUs_main_map_marker_kiev {
+    top: 254px;
+    right: 242px;
+}
+.oboutUs_main_map_marker_dnepr {
+    top: 307px;
+    right: 209px;
+}
+.oboutUs_main_map_marker_harkov {
+    top: 254px;
+    right: 188px;
+}
+.oboutUs_main_map_marker_baky {
+    top: 325px;
+    right: -6px;
+}
+.oboutUs_main_map_marker_piter {
+    top: 110px;
+    right: 280px;
+}
+.oboutUs_main_map_marker_tel-aviv {
+    top: 560px;
+    right: 110px;
+}
+.oboutUs_main_map_marker_kazan {
+    top: 172px;
+    right: 110px;
+}
+.oboutUs_main_map_eu {
+    float: right;
+    max-width: 800px;
+    opacity: 0.7;
+}
+.main_text {
+    padding: 100px 0 0 70px;
+    z-index: 30;
+    background-color: rgba(251, 230, 235, 0.2);
+    font-family: 'Bowlby One SC', cursive;
+}
+.oboutUs_main {
+    display: flex;
+    justify-content: space-between;
+}
+.main_text_name {
+    font-size: 40px;
+}
+.main_text_paragraph {
+    margin: 30px 30px 10px 0;
+}
+.button_oboutUs_main {
+    margin: 50px 30px 0 135px;
+    padding: 25px;
+    width: 150px;
+    min-height: 20px;
+    background-color: rgb(227, 30, 31);
+    border-radius: 50px;
+    text-align: center;
+    z-index: -1;
+    cursor: pointer;
+    color: #fbe6eb;
+    /*opacity: 0.7;*/
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 2s;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -webkit-animation-duration: .8s;
+}
+@keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.5; }
+}
+@-webkit-keyframes blinker {
+    from { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+.button_oboutUs_main:hover {
+    opacity: 1;
+}
+.button_oboutUs_main:focus {
+    outline: none;
+}
+.menuBar{
+    z-index: 50;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(251,230,235,1) 30%, rgba(226,207,233,1) 84%);
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 6px 5px 0px rgba(15,14,15,0.37);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(15,14,15,0.37);
+    box-shadow: 0px 6px 5px 0px rgba(15,14,15,0.37);
+}
+.headerImage img{
+    width: 250px;
+    cursor: pointer;
+}
+.menuItems a{
+    text-decoration: none;
+    margin-right: 15px;
+    color: #e64e6c;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(19deg, #FAACA8 0%, #DDD6F3 60%) ;
+    opacity: .8;
+    position: absolute;
+}
+/* footer */
+.footer{
+    
+    min-width: 1310px;
+    background: #fbe6e6;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.footer_up{
+   width: 90%;
+   margin: 0 auto;
+    height: 50px;
+}
+.footer_up a{
+    text-decoration: none;
+}
+.foote_btn{
+    width: 150px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    background: #fbe6e6;
+    cursor: pointer;
+    color: rgb(66, 66, 66);
+    border: 3px solid #f6bac8 ;
+    
+}
+.foote_btn:hover{
+    background: #f6bac8;
+}
+.footer_down{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+.line{
+   width: 90%;
+   background: silver;
+   height: 1px;
+   margin: 0 auto;
+
+}
+.footer_down_right img{
+    margin-top: 5px ;
+}
+.footer_down_middle{
+    margin-right:25px;
+    padding: 15px;
+    font-size: 12px;
+}
+.footer_down_left{
+    width: 200px;
+}
+.footer_down_left img{
+    margin-top: 5px;
+    width: 50%;
+}
+
+
+                                                    /* Career*/
+
+.Career__two__one__image {
+    padding-top: 50px;
+    width: 450px;
+    height: 450px;
+}
+.Career {
+    padding-top: 50px;
+    height: 650px;
+    min-width: 1310px;
+}
+.Caree__one {
+    padding-top: 10px;
+    color: #E3405f;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 30px;
+}
+.Career__two__one__one {
+    padding-top: 50px;
+}
+.Career__two {
+    color: #E3405f;
+    display: flex;
+    justify-content: space-around;
+}
+.Career__three {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.Career__four {
+    padding: 5px;
+    float: right;
+    width: 300px;
+    height: 126px;
+}
+.Career__four__one {
+    display: flex;
+    justify-content: space-around;
+}
+.Career__four__one__text {
+    padding-top: 35px;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18px;
+}
+.Caree__one__H {
+    padding: 10px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: #e3758f;
+    border-radius: 20px;
+}
+#con__one {
+    background-color: #fbe6eb;;
+}
+                                                            /* courses */
+#con__two {
+    background-color: #fbdadc;
+}
+.button a {
+    background: #e3405f;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 19px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    float: right;
+    display: block;
+    width: 250px;
+    border-radius: 20px;
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    animation-duration: 2s;
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+    -webkit-animation-duration: .8s;
+}
+@keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.5; }
+}
+@-webkit-keyframes blinker {
+    from { opacity: 0.5; }
+    to { opacity: 1.0; }
+}
+.courses__one__text1 {
+    padding-top: 20px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #E3405f;
+}
+.courses__image {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.courses__one__text2 {
+    font-style: italic;
+    font-size: 20px;
+    color: #000000;
+    text-align: justify;
+    /* text-indent: 50px; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.courses {
+    min-width: 1310px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.courses__one {
+    width: 378px;
+    height: 370px;
+}
+.courses__image__2 {
+    width: 80px;
+    height: 80px;
+}
+.courses__two {
+    display: flex;
+    justify-content: space-around;
+}
+.courses__two__text {
+    text-align: center;
+    color: #bc324e;
+    font-size: 20px;
+}
+.courses__three {
+    padding-top: 40px;
+}
+
+                                                            /*advantages*/
+#con__three {
+    background-color: #fbe6eb;
+    padding-top: 10px;
+}
+.advantages{
+    min-width: 1310px;
+}
+.advantages__one__text {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #E3405f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.advantages__two {
+    display: flex;
+    justify-content: space-around;
+}
+.advantages__two__three {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    height: 200px;
+    margin-top: 10px;
+}
+.advantages__two__three__text {
+    width: 350px;
+    padding-top: 20px;
+}
+.advantages__two__three__text1 {
+    font-size: 16px;
+    color: #000000;
+    text-transform: uppercase;
+}
+.advantages__two__three__text2 {
+    font-size: 17px;
+    color: #E3405f;
+}
+.advantages__four {
+    display: flex;
+    justify-content: space-around;
+}
+.advantages__four__image4 {
+    width: 90px;
+    height: 100px;
+}
+.advantages__four__text {
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #E3405f;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.advantages__four__one {
+    width: 300px;
+    height: 250px;
+}
+.advantages__four__one__1 {
+    width: 100px;
+    height: 250px;
+}
+.advantages__four__image {
+    margin-bottom: 30px;
+}
+.advantages__four__image5 {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .main_map {
+        margin: 50px;
+        width: 100%;
+    }
+    .oboutUs_main_map_marker_kiev {
+        top: 570px;
+    }
+    .oboutUs_main_map_marker_dnepr {
+        top: 623px;
+    }
+    .oboutUs_main_map_marker_harkov {
+        top: 570px;
+    }
+    .oboutUs_main_map_marker_baky {
+        top: 641px;
+    }
+    .oboutUs_main_map_marker_piter {
+        top: 426px;
+    }
+    .oboutUs_main_map_marker_tel-aviv {
+        top: 876px;
+    }
+    .oboutUs_main_map_marker_kazan {
+        top: 488px;
+    }
+    .oboutUs_main {
+        flex-direction: column;
+    }
+    .courses{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://deveducation.com/wp-content/themes/deveducation/assets/favicon/favicon.ico" sizes="32x32">
+    <title>IT-School DevEducation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+
+<body>
+    <div id="demo">
+        <section>
+
+            <div class="menuBar">
+               <a href="https://deveducation.com/"> <div class="headerImage"><img src="images/logo.svg"></div></a>
+                <div class="menuItems">
+                    <!-- <a href="#" v-if="show_ru">О нас</a>
+                    <a href="#" v-if="show_eng">About Us</a>
+                    <a href="#" v-if="show_ua">Про нас</a> -->
+                    <a href="#con__one" v-if="show_ru">IT Карьера</a>
+                    <a href="#con__one" v-if="show_eng">IT Career</a>
+                    <a href="#con__one" v-if="show_ua">IT Кар'єра</a>
+                    <a href="#con__two" v-if="show_ru">Курсы</a>
+                    <a href="#con__two" v-if="show_eng">Courses</a>
+                    <a href="#con__two" v-if="show_ua">Курси</a>
+                    <a href="#con__three" v-if="show_ru">Преимущества</a>
+                    <a href="#con__three" v-if="show_eng">Advantages</a>
+                    <a href="#con__three" v-if="show_ua">Переваги</a>
+                    <!-- <a href="#" v-if="show_ru">Партнёры</a>
+                    <a href="#" v-if="show_eng">Partners</a>
+                    <a href="#" v-if="show_ua">Партнери</a> -->
+                    <!-- <a href="#" v-if="show_ru">Контакты</a>
+                    <a href="#" v-if="show_eng">Contacts</a>
+                    <a href="#" v-if="show_ua">Контакти</a> -->
+                </div>
+                <div class="languages">
+                    <img src="images/united-kingdom (1).png" class="manu__flag"
+                        v-on:click="show_ru = false; show_eng = true; show_ua = false">
+                    <img src="images/ukraine (1).png" class="manu__flag" v-on:click="show_ru = false; show_eng = false; show_ua = true">
+                    <img src="images/russia.png" class="manu__flag" v-on:click="show_ru = true; show_eng = false; show_ua = false">
+                </div>
+            </div>
+
+            <div class="oboutUs_main">
+                <div class="main_text">
+                    <div class="main_text_name" v-if="show_ru">Международный IT-коледж</div>
+                    <div class="main_text_name" v-if="show_eng">International IT College</div>
+                    <div class="main_text_name"  v-if="show_ua">Міжнародний IT-коледж</div>
+                    <div class="main_text_paragraph" v-if="show_ru">Покажи отличный результат на собеседовании и получи
+                        грант в размере 85% от стоимости обучения!</div>
+                    <div class="main_text_paragraph" v-if="show_eng">Sign up for a course and receive a grant in the amount
+                        of 85% of the cost of training!</div>
+                    <div class="main_text_paragraph" v-if="show_ua">Покажи гарний результат на співбесіді та отримай грант
+                        у розмірі 85% від вартості навчання!</div>
+                    <a href="https://dnipro.deveducation.com/courses/">
+                    <div class="button_oboutUs_main" v-if="show_ru">
+                        ЗАПИСАТЬСЯ
+                    </div>
+                    </a>
+                    <div class="button_oboutUs_main" v-if="show_eng">SIGN UP</div>
+                    <div class="button_oboutUs_main" v-if="show_ua">ЗАПИСАТИСЯ</div>
+                    <div>
+                        <img src="image/layers3.png">
+                    </div>
+                </div>
+
+                <div class="main_map">
+                    <a href="https://kyiv.deveducation.com/">
+                        <div class="oboutUs_main_map_marker_kiev">
+                            <img src="images/—Pngtree—location vector icon_4019466.png">
+                            <p v-if="show_ru">Киев</p>
+                            <p v-if="show_eng">Kiev</p>
+                            <p v-if="show_ua">Київ</p>
+                        </div>
+                    </a>
+                    <a href="https://dnipro.deveducation.com/">
+                        <div class="oboutUs_main_map_marker_dnepr">
+                            <img src="images/—Pngtree—location vector icon_4019466.png">
+                            <p v-if="show_ru">Днепр</p>
+                            <p v-if="show_eng">Dnepr</p>
+                            <p v-if="show_ua">Дніпро</p>
+                        </div>
+                    </a>
+                    <a href="https://kharkiv.deveducation.com/">
+                        <div class="oboutUs_main_map_marker_harkov">
+                            <img src="images/—Pngtree—location vector icon_4019466.png">
+                            <p v-if="show_ru">Харьков</p>
+                            <p v-if="show_eng">Kharkiv</p>
+                            <p v-if="show_ua">Харків</p>
+                        </div>
+                    </a>
+                    <a href="https://baku.deveducation.com/">
+                        <div class="oboutUs_main_map_marker_baky">
+                            <img src="images/—Pngtree—location vector icon_4019466.png">
+                            <p v-if="show_ru">Баку</p>
+                            <p v-if="show_eng">Baku</p>
+                            <p v-if="show_ua">Баку</p>
+                        </div>
+                    </a>
+                    <a href="https://spb.deveducation.com/">
+                        <div class="oboutUs_main_map_marker_piter">
+                            <img src="images/—Pngtree—location vector icon_4019466.png">
+                            <p v-if="show_ru">Санкт.<br>Петербург</p>
+                            <p v-if="show_eng">St. <br>Petersburg</p>
+                            <p v-if="show_ua">Санкт-<br>Петербург</p>
+                        </div>
+                    </a>
+                    <div class="oboutUs_main_map_marker_tel-aviv">
+                        <img src="images/—Pngtree—location vector icon_4019466.png">
+                        <p v-if="show_ru">Тель-Авив<br>(главный офис)</p>
+                        <p v-if="show_eng">Tel Aviv<br>(main office)</p>
+                        <p v-if="show_ua">Тель-Авив<br>(головний офіс)</p>
+                    </div>
+                    <div class="oboutUs_main_map_marker_kazan">
+                        <img src="images/—Pngtree—location vector icon_4019466.png">
+                        <p v-if="show_ru">Казань<br>(скоро открытие)</p>
+                        <p v-if="show_eng">Kazan<br>(opening soon)</p>
+                        <p v-if="show_ua">Казань<br>(незабаром відкриття)</p>
+                    </div>
+                    <img class="oboutUs_main_map_eu"
+                        src="images/kisspng-europe-world-map-black-and-white-blank-map-europe-map-5b4786cb90e848.7891728915314142195936 (1).png">
+                </div>
+            </div>
+        </section>
+
+        <section class="con" id="con__one">
+            <div class="Career">
+                <div class="Career__two">
+                    <div class="Career__two__one">
+                        <div class="Career__two__one__one">
+                            <div class="Career__three">
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Вы всегда в курсе всех новостей в сфере IT.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            You are always up to date with all the news in the field of IT.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Ви завжди в курсі всіх новин в сфері IT.
+                                        </div>
+                                        <img src="image/programmer.png" class="Career__four__one__img">
+                                    </div>
+                                </div>
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <img src="image/programmer(1).png" class="Career__four__one__img">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Вас окружают высокообразованные люди.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            Highly educated people surround you.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Вас оточують високоосвічені люди.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Career__three">
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Работа с инновационными проектами.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            Work with innovative projects.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Робота з інноваційними проектами.
+                                        </div>
+                                        <img src="image/programmer(2).png" class="Career__four__one__img">
+                                    </div>
+                                </div>
+                                <div class="Caree__one__H" v-if="show_ru">
+                                    Построй<br>
+                                    успешную <br>
+                                    IT карьеру
+                                </div>
+                                <div class="Caree__one__H" v-if="show_eng">
+                                    Build<br>
+                                    successful<br>
+                                    IT career
+                                </div>
+                                <div class="Caree__one__H" v-if="show_ua">
+                                    Побудуй<br>
+                                    успішну <br>
+                                    IT карьеру
+                                </div>
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <img src="image/programmer(4).png" class="Career__four__one__img">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Возможность работать удаленно.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            Ability to work remotely.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Возможность роботи на відстані.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Career__three">
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Командировки, релокейт, обмен опытом.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            Business trips, relocate, exchange of experience.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Відрядження, релокейт, обмін досвідом.
+                                        </div>
+                                        <img src="image/programmer(5).png" class="Career__four__one__img">
+                                    </div>
+                                </div>
+                                <div class="Career__four">
+                                    <div class="Career__four__one">
+                                        <img src="image/programmer(6).png" class="Career__four__one__img">
+                                        <div class="Career__four__one__text" v-if="show_ru">
+                                            Уровень дохода.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_eng">
+                                            Income level.
+                                        </div>
+                                        <div class="Career__four__one__text" v-if="show_ua">
+                                            Рівень прибутку.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Career__two__one">
+                        <img src="image/hero__notebook.svg" class="Career__two__one__image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="con" id="con__two">
+            <div class="courses">
+                <div class="courses__one">
+                    <div>
+                        <div v-if="show_ru" class="courses__one__text1">
+                            Наши курсы
+                        </div>
+                        <div v-if="show_eng" class="courses__one__text1">
+                            Our Courses
+                        </div>
+                        <div v-if="show_ua" class="courses__one__text1">
+                            Наші курси
+                        </div>
+                        <img src="image/logo.svg" class="courses__image">
+                    </div>
+                    <div v-if="show_ru" class="courses__one__text2">
+                        Покажи отличный результат на собеседовании и получи грант в размере 85% от стоимости обучения!
+                    </div>
+                    <div v-if="show_eng" class="courses__one__text2">
+                        Show an excellent result at the interview and get a grant in the amount of 85% of the cost of training!
+                    </div>
+                    <div v-if="show_ua" class="courses__one__text2">
+                        Покажи відмінний результат на співбесіді і отримай грант в розмірі 85% від вартості навчання!
+                    </div>
+                </div>
+                <div class="courses__one">
+                    <div class="courses__two">
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                Java
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/java/">
+                            <div>
+                                <img src="image/java.png" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                FrontEnd
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/frontend/">
+                            <div>
+                                <img src="image/js.png" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                QA/AT
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/qa-manual-automation/">
+                            <div>
+                                <img src="image/testing.png" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="courses__two">
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                Mobile
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/xamarin/">
+                            <div>
+                                <img src="image/mobile.svg" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                Base (C#)
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/basic/">
+                            <div>
+                                <img src="image/C_hash.png" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                        <div class="courses__three">
+                            <div class="courses__two__text">
+                                React
+                            </div>
+                            <a href="https://dnipro.deveducation.com/ua/courses/react-native/">
+                            <div>
+                                <img src="image/react.png" class="courses__image__2">
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses__one">
+                    <img src="image/layers.png" class="courses__image__1">
+                    <div class="button">
+                        <a v-if="show_ru" href="https://deveducation.com/">
+                            Записаться на курс
+                        </a>
+                        <a v-if="show_eng" href="https://deveducation.com/">
+                            Enroll in a course
+                        </a>
+                        <a v-if="show_ua" href="https://deveducation.com/">
+                            Записатись на курс
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="con" id="con__three">
+            <div class="advantages">
+                <div v-if="show_ru" class="advantages__one__text">
+                    Наши преимущества
+                </div>
+                <div v-if="show_eng" class="advantages__one__text">
+                    Our advantages
+                </div>
+                <div v-if="show_ua" class="advantages__one__text">
+                    Наші переваги
+                </div>
+                <div>
+                    <div class="advantages__two">
+                        <div class="advantages__two__three">
+                            <div>
+                                <img src="image/affordable.png">
+                            </div>
+                            <div class="advantages__two__three__text">
+                                <div v-if="show_ru" class="advantages__two__three__text1">
+                                    Доступная стоимость курсов
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text1">
+                                    Affordable Course Prices
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text1">
+                                    Доступна вартість курсів
+                                </div>
+                                <div v-if="show_ru" class="advantages__two__three__text2">
+                                    Получив грант, студент платит всего $40 в месяц!
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text2">
+                                    Having received a grant, a student pays only $ 40 per month!
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text2">
+                                    Отримавши грант, студент платить за все $ 40 в місяць!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__two__three">
+                            <div>
+                                <img src="image/promotion.png">
+                            </div>
+                            <div class="advantages__two__three__text">
+                                <div v-if="show_ru" class="advantages__two__three__text1">
+                                    Высокий процент трудоустройства
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text1">
+                                    High percentage of employment
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text1">
+                                    Високий відсоток працевлаштування
+                                </div>
+                                <div v-if="show_ru" class="advantages__two__three__text2">
+                                    87% наших студентов уже работают в крупных IT-компаниях
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text2">
+                                    87% of our students already work in large IT companies
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text2">
+                                    87% наших студентів вже працюють у великих IT-компаніях
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages__two">
+                        <div class="advantages__two__three">
+                            <div>
+                                <img src="image/sharing.png">
+                            </div>
+                            <div class="advantages__two__three__text">
+                                <div v-if="show_ru" class="advantages__two__three__text1">
+                                    Большой опыт преподавания
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text1">
+                                    Extensive teaching experience
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text1">
+                                    Великий досвід викладання
+                                </div>
+                                <div v-if="show_ru" class="advantages__two__three__text2">
+                                    Практикующие специалисты в преподавателях и более 400 выпускников
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text2">
+                                    Practitioners in teachers and over 400 graduates
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text2">
+                                    Практикуючі фахівці у викладачах і більше 400 випускників
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__two__three">
+                            <div>
+                                <img src="image/schedule.png">
+                            </div>
+                            <div class="advantages__two__three__text">
+                                <div v-if="show_ru" class="advantages__two__three__text1">
+                                    Длительность обучения
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text1">
+                                    Training duration
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text1">
+                                    Тривалість навчання
+                                </div>
+                                <div v-if="show_ru" class="advantages__two__three__text2">
+                                    Вы освоите востребованную профессию в максимально короткий срок
+                                </div>
+                                <div v-if="show_eng" class="advantages__two__three__text2">
+                                    You will learn the profession in demand as soon as possible
+                                </div>
+                                <div v-if="show_ua" class="advantages__two__three__text2">
+                                    Ви освоїте затребувану професію в максимально короткий термін
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div v-if="show_ru" class="advantages__four__text">
+                    Наши партнёры
+                </div>
+                <div v-if="show_eng"  class="advantages__four__text">
+                    Our partners
+                </div>
+                <div v-if="show_ua" class="advantages__four__text">
+                    Наші партнери
+                </div>
+                <div class="advantages__four">
+                    <div class="advantages__four__one">
+                        <div class="advantages__four__image">
+                            <a href="https://www.finversia.ru/">
+                            <img src="image/finversia.png">
+                            </a>
+                        </div>
+                        <div class="advantages__four__image">
+                            <a href="https://xcritical.software/">
+                            <img src="image/xcritical.svg">
+                            </a>
+                        </div>
+                        <div class="advantages__four__image">
+                            <a href="https://wizardsdev.com/">
+                            <img src="image/wizardsdev.svg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="advantages__four__one">
+                        <a href="https://dnipro.deveducation.com/">
+                        <img src="image/layers1.png ">
+                        </a>
+                    </div>
+                    <div class="advantages__four__one__1">
+                        <div class="advantages__four__image5">
+                            <a href="https://linguatrip.com/ru/">
+                            <img src="image/1200px-LinguaTrip.com_logo.svg.png" class="advantages__four__image4">
+                            </a>
+                        </div>
+                        <div>
+                            <a href="https://necsi.edu/">
+                            <img src="image/nesci2.png" class="advantages__four__image4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="footer">
+                <div class="footer_up">
+                    <a href="https://deveducation.com/contacts/"><div class="foote_btn">Contact us</div></a>
+                </div>
+                <div class="line"></div>
+                <div class="footer_down">
+                    <div class="footer_down_left">
+                        <img src="images/logo.svg" alt="">
+                    </div>
+                    <div class="footer_down_middle">
+                        Все права защишены &#169
+                    </div>
+                    <div class="footer_down_right">
+                       <a href="https://www.facebook.com/IT.DevEducation/"target="_blank"> <img src="images/fb.svg"></a>
+                       <a href="https://www.instagram.com/dev.education/"target="_blank"> <img src="images/instagram.svg"></a>
+                       <a href=""> <img src="images/linkedin.svg"target="_blank"></a>
+                       <a href="https://twitter.com/DevEducation2"target="_blank"> <img src="images/twitter.svg"></a>
+                       <a href="https://vk.com/public179222854"target="_blank"> <img src="images/vk.svg"></a>
+                       <a href="https://www.youtube.com/channel/UCOgVyVrC6Plr8QZK6pom9Bg"target="_blank"> <img src="images/youtube.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/init.js"></script>
+</body>
+</html>
